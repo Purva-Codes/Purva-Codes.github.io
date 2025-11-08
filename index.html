@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Purva Parab | Portfolio</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -166,7 +166,7 @@
             transition: width 1.5s ease-out;
         }
 
-        /* ===== PROJECTS SECTION (REVERTED) ===== */
+        /* ===== PROJECTS SECTION ===== */
         .projects-container {
             display: flex;
             justify-content: center;
@@ -210,7 +210,7 @@
             color: var(--secondary-color);
         }
 
-        /* ===== NEW CERTIFICATES SECTION ===== */
+        /* ===== CERTIFICATES SECTION ===== */
         .certificates-container {
             display: flex;
             justify-content: center;
@@ -258,44 +258,24 @@
             color: var(--secondary-color);
         }
         
-        /* ===== CONTACT FORM ===== */
-        form {
-            max-width: 500px;
-            margin: auto;
+        /* ===== CONTACT SECTION ===== */
+        .social-links {
+            margin-bottom: 30px;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            gap: 25px;
         }
 
-        input, textarea {
-            margin-bottom: 15px;
-            padding: 15px;
-            font-size: 16px;
-            border: 1px solid var(--border-color);
-            border-radius: 5px;
-            background: var(--card-bg);
+        .social-links a {
+            text-decoration: none;
             color: var(--text-light);
+            font-size: 2.5em; /* Makes icons bigger */
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
-        button {
-            padding: 15px;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            transition: background 0.3s ease;
-        }
-
-        button:hover {
-            background: var(--secondary-color);
-        }
-
-        #form-status {
-            margin-top: 20px;
-            font-size: 1.1em;
-            height: 25px; 
+        .social-links a:hover {
+            color: var(--primary-color);
+            transform: scale(1.1);
         }
 
         /* ===== SCROLL TO TOP BUTTON ===== */
@@ -350,8 +330,6 @@
             .links i {
                 margin-right: 5px;
             }
-
-        
     </style>
 </head>
 <body>
@@ -361,7 +339,8 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#certificates">Certificates</a></li> <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -377,11 +356,9 @@
             <p>
                 I’m a passionate Web Developer dedicated to creating beautiful, user-friendly, and responsive websites that deliver meaningful digital experiences. With a strong focus on frontend design, I love transforming ideas and concepts into clean, engaging, and interactive interfaces using HTML, CSS, and JavaScript. My attention to detail and design aesthetics helps me craft websites that not only look great but also provide seamless usability across all devices.
             </p>
-
             <p>
                 Beyond the frontend, I have hands-on experience with full-stack development using PHP and MySQL, allowing me to build websites that are both visually appealing and technically robust. I enjoy integrating backend functionality to enhance performance, manage data efficiently, and ensure that every site I create runs smoothly and securely.
             </p>
-
             <p>
                 I’m deeply motivated by problem-solving and continuous learning. Whether it’s exploring new frameworks, optimizing performance, or improving user experience, I’m always eager to grow as a developer. My goal is to design and develop web solutions that combine creativity, functionality, and reliability — helping users and businesses make a lasting impact online.
             </D>
@@ -429,7 +406,6 @@
                 <h3>Responsive Web Design</h3>
                 <p class="cert-issuer">Issued by: freeCodeCamp</p>
                 <p>Covers HTML5, CSS3, Flexbox, CSS Grid, and building multiple responsive projects.</p>
-                
                 <a href="https://www.freecodecamp.org/certification/fccadd194e3-b0ac-443e-ac94-6bd18acfd6cd/responsive-web-design" class="cert-link" target="_blank">View Certificate</a>
             </div>
             
@@ -440,8 +416,7 @@
                 <h3>Introduction To SQL</h3>
                 <p class="cert-issuer">Issued by: Sololearn</p>
                 <p>Covers all fundamental SQL commands, including data manipulation, joins, and database creation.</p>
-                
-                <a href="https://api2.sololearn.com/v2/certificates/CC-FKEGMKXN/image/png?t=638982110870372669 " class="cert-link" target="_blank">View Certificate</a>
+                <a href="https://www.sololearn.com/certificates/CC-FKEGMKXN" class="cert-link" target="_blank">View Certificate</a>
             </div>
 
         </div>
@@ -486,18 +461,22 @@
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <form id="contactForm">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-            <p id="form-status"></p>
-        </form>
-    </section>
+
+        <div class="social-links">
+            <a href="YOUR_LINKEDIN_PROFILE_URL" target="_blank" title="My LinkedIn Profile">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="mailto:your.email@gmail.com" title="Send me an email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://github.com/Purva1234-ab" target="_blank" title="My GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        </section>
     
     <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         
@@ -553,28 +532,6 @@
 
         document.querySelectorAll('.fill').forEach(skill => {
             skillObserver.observe(skill);
-        });
-
-        // ===== EMAILJS CONTACT FORM =====
-        emailjs.init('YOUR_USER_ID'); // Replace with your EmailJS User ID
-
-        const form = document.getElementById('contactForm');
-        const formStatus = document.getElementById('form-status');
-        
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            formStatus.textContent = 'Sending...';
-            
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-                .then(() => {
-                    formStatus.textContent = 'Message sent successfully!';
-                    formStatus.style.color = 'lightgreen';
-                    form.reset();
-                }, (error) => {
-                    formStatus.textContent = 'Failed to send message. Please try again.';
-                    formStatus.style.color = 'red';
-                    console.log('FAILED...', error);
-                });
         });
         
         // ===== SCROLL TO TOP BUTTON =====
